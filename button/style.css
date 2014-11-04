@@ -53,7 +53,7 @@ input{
     top: -100%;
     background: #13964C !important;
     color: #358337;
-    content: '';
+    content: 'focus';
     left: 0;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
@@ -62,19 +62,4 @@ input{
     padding: 15px 0;
     font-weight: 700;
     width:162px;
-}
-.ok:after{
-    background: #13964C  !important;
-    box-shadow: 0 5px #178147;
-    content: 'ok';
-}
-.error:after{
-    background: #DD1919  !important;
-    box-shadow: 0 5px #BD3737;
-    content: 'error';
-}
-.warning:after{
-    background: #EFEE1D  !important;
-    box-shadow: 0 5px #D1D019;
-    content: 'warning';
 }
