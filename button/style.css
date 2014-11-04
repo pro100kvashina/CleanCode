@@ -1,0 +1,65 @@
+/* by Adamenko Igor - pro100kvashina.kz*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #2ac56c;
+}
+input{
+    outline:none;
+}
+.wrapper {
+    margin:200px auto;
+    text-align: center;
+}
+.standard{
+    border: none;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    background: #17aa56;
+    color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px #119e4d;
+    padding: 15px 40px;
+    font-weight: 700;
+    font-size: 150%;
+    transform-style: preserve-3d;
+	transition: all ease 0.2s;
+	-moz-transition: all ease 0.2s;
+	-webkit-transition: all ease 0.2s;
+	-o-transition: all ease 0.2s;
+    position: relative;
+    width:162px;
+}
+.standard:focus{
+    background: #aaa;
+    -webkit-transform-origin: 60% 100%;
+    -webkit-transform: rotateX(-90deg) translateY(80%);
+    -moz-transform-origin: 60% 100%;
+    -moz-transform: rotateX(-90deg) translateY(80%);
+    -ms-transform-origin: 60% 100%;
+    -ms-transform: rotateX(-90deg) translateY(80%);
+    transform-origin: 60% 100%;
+    transform: rotateX(-90deg) translateY(80%);
+}
+.standard:after{
+    -webkit-transform-origin: 0% 100%;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform-origin: 0% 100%;
+    -moz-transform: rotateX(90deg);
+    -ms-transform-origin: 0% 100%;
+    -ms-transform: rotateX(90deg);
+    transform-origin: 0% 100%;
+    position: absolute;
+    transform: rotateX(90deg);
+    top: -100%;
+    background: #13964C !important;
+    color: #358337;
+    content: 'focus';
+    left: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px #178147;
+    padding: 15px 0;
+    font-weight: 700;
+    width:162px;
+}
