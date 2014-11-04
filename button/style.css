@@ -18,7 +18,7 @@ input{
     color: #fff;
     border-radius: 7px;
     box-shadow: 0 5px #119e4d;
-    padding: 15px 40px;
+    padding: 15px 0;
     font-weight: 700;
     font-size: 150%;
     transform-style: preserve-3d;
@@ -28,6 +28,7 @@ input{
 	-o-transition: all ease 0.2s;
     position: relative;
     width:162px;
+    margin:10px;
 }
 .standard:focus{
     background: #aaa;
@@ -68,13 +69,99 @@ input{
     box-shadow: 0 5px #178147;
     content: 'ok';
 }
-.error:after{
+/**** error ****/
+@-webkit-keyframes error {
+    25%  {transform: rotateY(60deg);background: #DD1919  !important;}
+    50%  {transform: rotateY(0deg);}
+    75%  {transform: rotateY(60deg);}    
+    100% {transform: rotateY(0deg);background: #13964C  !important;}
+}
+.error:focus{
+    -webkit-animation:error 1s;
+    -moz-animation:error 1s;
     background: #DD1919  !important;
     box-shadow: 0 5px #BD3737;
-    content: 'error';
+    outline: none;
+    -webkit-transform: rotateX(0) translateY(0);
+    -moz-transform: rotateX(0) translateY(0);
 }
+
+.error:after{
+    background: #EFEE1D  !important;
+    box-shadow: 0 5px #D1D019;
+    content: 'warning';
+}
+/**** error ****/
+
 .warning:after{
     background: #EFEE1D  !important;
     box-shadow: 0 5px #D1D019;
     content: 'warning';
 }
+
+/**** message ****/
+.message{
+    box-shadow: 0 5px #18AF98;
+    background: #1bdbbe !important;
+    padding-left: 45px;
+}
+.message span{
+    background: url("images/mess.png") no-repeat left center;
+    width:32px;
+    height: 23px;
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 20px;
+	transition: all ease 0.2s;
+	-moz-transition: all ease 0.2s;
+	-webkit-transition: all ease 0.2s;
+	-o-transition: all ease 0.2s;
+}
+.message:focus{
+    transform-origin: 0% 0%;
+    transform: rotateX(0);
+    outline: none;
+}
+@-webkit-keyframes message {
+    10%  {opacity: 1;transform: scale(1);}
+    20%  {transform: scale(0.9);}
+    30%  {transform: scale(0.8);}
+    40%  {transform: scale(0.7);}
+    50%  {transform: scale(0.6);}
+    60%  {transform: scale(0.5);}
+    70%  {transform: scale(0.4);}
+    80%  {transform: scale(0.3);}
+    90%  {transform: scale(0.2);}
+    100% {opacity: 0;transform: scale(0.1);}
+}
+@-moz-keyframes message {
+    10%  {opacity: 1;transform: scale(1);}
+    20%  {transform: scale(0.9);}
+    30%  {transform: scale(0.8);}
+    40%  {transform: scale(0.7);}
+    50%  {transform: scale(0.6);}
+    60%  {transform: scale(0.5);}
+    70%  {transform: scale(0.4);}
+    80%  {transform: scale(0.3);}
+    90%  {transform: scale(0.2);}
+    100% {opacity: 0;transform: scale(0.1);}
+}
+.message:focus span{
+    -webkit-animation:message 1s;
+    -moz-animation:message 1s;
+}
+/**** message ****/
+
+
+
+
+
+
+
+
+
+
+
+
+
