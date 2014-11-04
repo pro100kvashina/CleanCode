@@ -76,6 +76,12 @@ input{
     75%  {transform: rotateY(60deg);}    
     100% {transform: rotateY(0deg);background: #13964C  !important;}
 }
+@-moz-keyframes error {
+    25%  {transform: rotateY(60deg);background: #DD1919  !important;}
+    50%  {transform: rotateY(0deg);}
+    75%  {transform: rotateY(60deg);}    
+    100% {transform: rotateY(0deg);background: #13964C  !important;}
+}
 .error:focus{
     -webkit-animation:error 1s;
     -moz-animation:error 1s;
@@ -152,16 +158,3 @@ input{
     -moz-animation:message 1s;
 }
 /**** message ****/
-
-
-
-
-
-
-
-
-
-
-
-
-
