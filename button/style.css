@@ -67,24 +67,24 @@ input{
 .ok:after{
     background: #13964C  !important;
     box-shadow: 0 5px #178147;
-    content: 'ok';
+    content: 'action';
 }
 /**** error ****/
 @-webkit-keyframes error {
-    25%  {transform: rotateY(60deg);background: #DD1919  !important;}
+    25%  {transform: rotateY(35deg);background: #DD1919  !important;}
     50%  {transform: rotateY(0deg);}
-    75%  {transform: rotateY(60deg);}    
+    75%  {transform: rotateY(35deg);}    
     100% {transform: rotateY(0deg);background: #13964C  !important;}
 }
 @-moz-keyframes error {
-    25%  {transform: rotateY(60deg);background: #DD1919  !important;}
+    25%  {transform: rotateY(35deg);background: #DD1919  !important;}
     50%  {transform: rotateY(0deg);}
-    75%  {transform: rotateY(60deg);}    
+    75%  {transform: rotateY(35deg);}    
     100% {transform: rotateY(0deg);background: #13964C  !important;}
 }
 .error:focus{
-    -webkit-animation:error 1s;
-    -moz-animation:error 1s;
+    -webkit-animation:error 0.7s;
+    -moz-animation:error 0.7s;
     background: #DD1919  !important;
     box-shadow: 0 5px #BD3737;
     outline: none;
@@ -95,15 +95,33 @@ input{
 .error:after{
     background: #EFEE1D  !important;
     box-shadow: 0 5px #D1D019;
-    content: 'warning';
+    content: 'error';
 }
 /**** error ****/
 
-.warning:after{
+/**** warning ****/
+@-webkit-keyframes warning {
+    25%  {transform: scale(1.3)}
+    50%  {transform: scale(1)}
+    75%  {transform: scale(1.3)}    
+    100% {transform: scale(1)}
+}
+@-moz-keyframes warning {
+    25%  {transform: scale(1.3)}
+    50%  {transform: scale(1)}
+    75%  {transform: scale(1.3)}    
+    100% {transform: scale(1)}
+}
+.warning:focus{
+    -webkit-transform: rotateX(0) translateY(0);
+    -moz-transform: rotateX(0) translateY(0);
+    outline: none;
+    -webkit-animation:warning 1s;
+    -moz-animation:warning 1s;
     background: #EFEE1D  !important;
     box-shadow: 0 5px #D1D019;
-    content: 'warning';
 }
+/**** warning ****/
 
 /**** message ****/
 .message{
